@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Windows 92</title>
+  <link rel="stylesheet" href="Style/Style.css"> <!-- Enlace al archivo de estilos -->
+</head>
+<body>
+  <div class="desktop"> <!-- Escritorio principal -->
+
+    <div class="icon" onclick="openWindow('JuanAristeo')">
+      <!-- Ícono de "JuanAristeo" -->
+      <img src="Style/Iconos/JuanAristeo.png" alt="JuanAristeo">
+      <p>JuanAristeo</p>
+    </div>
+    <div class="icon" onclick="openWindow('trabajos')">
+      <!-- Ícono de "Trabajos" -->
+      <img src="Style/Iconos/IconoExperiencia.png" alt="Trabajos">
+      <p>Educacion</p>
+    </div>
+    <div class="icon" onclick="openWindow('experiencia')">
+      <!-- Ícono de "Experiencia" -->
+      <img src="Style/Iconos/IconoExperiencia.png" alt="Experiencia">
+      <p>Experiencia</p>
+    </div>
+
+
+    <div class="clock" id="clock"></div> <!-- Reloj agregado aquí -->
+  </div>
+
+<!-- Barra de tareas (sin duplicar) -->
+<div class="taskbar">
+  <button class="start-btn" onclick="toggleStartMenu()">
+    <img src="Style/Iconos/IconoInicio.png" alt="Inicio">
+    <p></p>
+    <p>Start</p>
+  </button>
+  <div class="start-menu" id="startMenu">
+    <ul>
+      <li onclick="openWindow('JuanAristeo')">JuanAristeo</li>
+      <li onclick="openWindow('trabajos')">Educacion</li>
+      <li onclick="openWindow('experiencia')">Experiencia</li>
+    </ul>
+  </div>
+</div>
+
+    <!-- Ventana de "JuanAristeo" -->
+    <div id="JuanAristeo" class="window">
+      <div class="window-header">
+        <span>JuanAristeo</span>
+        <button class="close-btn" onclick="closeWindow('JuanAristeo')">X</button>
+      </div>
+      <div class="window-content">
+        <p>!Hola y bienvenido!</p>
+        <p>Mi nombre es Juan Luis Cruz Aristeo, y te invito a explorar mi portafolio.</p> 
+        <p>Soy un Ingeniero Mecatronico apasionado de la tecnología y el desarrollo, con experiencia en:</p>
+        <p>Ciberseguridad</p>
+        <p>Soporte tecnologico</p>
+        <p>Desarrollo web</p>
+        <p>A lo largo de mi trayectoria, he trabajado en diversos proyectos que han fortalecido 
+          mis habilidades en [Pentesting y Ciberseguridad, Manejo de entornos virtualizados, Desarrollo web, Actualización y Configuración de Software, Seguridad Electrónica].</p>
+        <p>Sin embargo mi experiencia  y hablidades no se reducen solo a eso, podras encontrar en el escritorio dos carpetas</p>
+        <p>En donde encontraras toda la informacion a detalle sobre mi :D</p>
+        <p>¡Bienvenido! Siéntete libre de explorar mi portafolio.</p>
+
+      </div>
+    </div>
+
+  <!-- Ventana de "Trabajos" -->
+  <div id="trabajos" class="window">
+    <div class="window-header">
+      <span>Educacion</span>
+      <button class="close-btn" onclick="closeWindow('trabajos')">X</button>
+    </div>
+    <div class="window-content">
+      <p>Aquí puedes agregar tus proyectos o portafolio.</p>
+
+      <div class="file-explorer">
+        <ul class="tree">
+          <li>
+            <span class="folder" onclick="toggleFolder(this)">📁 Educación</span>
+            <ul class="nested">
+              <li>
+                <span class="folder" onclick="toggleFolder(this)">📁 Cursos</span>
+                <ul class="nested">
+                  <li onclick="openWindow('Curso de Redes', 'Este es el contenido del curso de redes')">📄 Curso de Redes</li>
+                  <li onclick="openWindow('Curso de Ciberseguridad', 'Detalles del curso de ciberseguridad')">📄 Curso de Ciberseguridad</li>
+                </ul>
+              </li>
+              <li>
+                <span class="folder" onclick="toggleFolder(this)">📁 Certificaciones</span>
+                <ul class="nested">
+                  <li onclick="openWindow('CEH', 'Certificación CEH - Ethical Hacking')">📄 CEH</li>
+                  <li onclick="openWindow('OSCP', 'Certificación OSCP - Pentesting Avanzado')">📄 OSCP</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contenedor para ventanas -->
+      <div id="window-container"></div>
+      
+      
+
+    </div>
+  </div>
+
+  <!-- Ventana de "Experiencia" -->
+  <div id="experiencia" class="window">
+    <div class="window-header">
+      <span>Experiencia</span>
+      <button class="close-btn" onclick="closeWindow('experiencia')">X</button>
+    </div>
+    <div class="window-content">
+      <p>Aquí puedes agregar información sobre tu experiencia laboral.</p>
+    </div>
+  </div>
+
+
+  <script src="Script/Script.js"></script> <!-- Enlace al archivo de funciones -->
+</body>
+</html>

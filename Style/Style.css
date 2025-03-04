@@ -1,0 +1,212 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0;
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Tahoma, sans-serif;
+  background-color: #008080; /* Color del fondo del escritorio */
+  background-image: url('wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  font-size: 16px;
+font-weight: bold;
+}
+
+/* Escritorio principal */
+.desktop {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Íconos del escritorio */
+.icon {
+  width: 90px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.icon img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Ventanas */
+.window {
+  width: 300px;
+  background-color: #C0C0C0; /* Fondo de la ventana */
+  border: 2px solid grey;
+  position: absolute;
+  display: none; /* Oculto por defecto */
+  box-shadow: 4px 4px 0px #000;
+}
+
+.window-header {
+  background-color: #000080; /* Fondo de la cabecera */
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Barra de tareas */
+.taskbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separa los elementos */
+  background-color: #c0c0c0;
+  padding: 5px 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  border: 2px solid white;
+}
+
+/* Botón de Inicio */
+.start-btn {
+  width: 80px;
+  height: 30px;
+  background-color: #C0C0C0;
+  border: 2px solid #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 14px;
+}
+
+.start-btn:active {
+  border: 2px inset #808080; /* Efecto "presionado" */
+}
+
+/* Menú de Inicio */
+.start-menu {
+  position: fixed;
+  bottom: 40px; /* Ajustar para que quede encima de la barra */
+  left: 10px;
+  width: 150px;
+  background-color: #C0C0C0;
+  border: 2px solid black;
+  display: none; /* Oculto por defecto */
+  box-shadow: 4px 4px 0px #000;
+  z-index: 1000;
+}
+.start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.start-menu li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.start-menu li:hover {
+  background-color: #000080;
+  color: white;
+}
+
+
+/* Estilo del encabezado de la ventana */
+.window-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  cursor: grab; /* Icono de "mover" */
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+
+/* Cambiar cursor al arrastrar */
+.window-header:active {
+  cursor: grabbing;
+}
+
+/* Estilo del botón de inicio */
+.start-btn {
+  background-color: #c0c0c1; /* Color de fondo azul */
+  border: 2px solid gray;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 85px; /* Tamaño del botón */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px; /* Bordes redondeados */
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px black;
+}
+
+/* Imagen dentro del botón de inicio */
+.start-btn img {
+  width: 36px; /* Ajusta el tamaño del ícono */
+  height: 36px;
+  object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Efecto hover */
+.start-btn:hover {
+  background-color: #404040; /* Color más oscuro al pasar el cursor */
+}
+/* Animacion de ventanillas*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.window {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/*estilo de subcarpetas*/
+.file-explorer {
+  font-family: 'MS Sans Serif', sans-serif;
+  background: silver;
+  padding: 10px;
+  width: 300px;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+}
+
+.tree {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.folder {
+  cursor: pointer;
+  font-weight: bold;
+  color: navy;
+}
+
+.nested {
+  display: none;
+  margin-left: 15px;
+}
+
+.active {
+  display: block;
+}
+
+
