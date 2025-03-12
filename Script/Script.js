@@ -81,4 +81,9 @@ function toggleFolder(element) {
   }
 }
 
+// Apertura de pdf de los cursos 
+
+function openPDF(pdfPath) {
+  window.open(pdfPath, '_blank');
+}
 
